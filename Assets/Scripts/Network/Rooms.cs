@@ -1,10 +1,19 @@
+using System;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
 
 public class Rooms : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private TMP_InputField joinInputField, createInputField;
     [SerializeField] private string roomName;
-    
+
+    private void Start()
+    {
+        joinInputField?.onValueChanged.AddListener(text => { roomName = text;});
+        createInputField?.onValueChanged.AddListener(text => { roomName = text;});
+    }
+
     [ContextMenu("Create")]
     public void CreateRoom()
     {
@@ -39,6 +48,7 @@ public class Rooms : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         print($"Has Connected To Room{PhotonNetwork.CurrentRoom.Name}!");
+        PhotonNetwork.LoadLevel("Game");
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
