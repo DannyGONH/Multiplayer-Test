@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fa039aacda60b488707de7c3cf32c0, type: 3}
   m_Name: Configuration_Player
   m_EditorClassIdentifier: 
-  characters: []
-  playerSelected: {fileID: 0}
+  characters:
+  - {fileID: 484276979942138894, guid: 732fc40f8245693498107ce1a373889e, type: 3}
+  - {fileID: 3356842491728207929, guid: 6f5c91a6e47c7f54d97f3a1be04fe92b, type: 3}
+  - {fileID: 3779151469783809741, guid: b001c1821177dd44b933c0315156a5f9, type: 3}
+  - {fileID: 4503099072181828067, guid: 36803da0d33112343b3d795e4c39d8c9, type: 3}
+  playerSelected: {fileID: 11400000, guid: 2c36d00307010f649ade063ef23aba6c, type: 2}

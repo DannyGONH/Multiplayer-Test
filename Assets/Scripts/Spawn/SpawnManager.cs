@@ -7,8 +7,9 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
-
+    [SerializeField]
     private float startDelay = 1;
+    [SerializeField]
     private float repeatRate = 1;
     
     private Vector3 spawnPos = new Vector3(40, 0, 0);
